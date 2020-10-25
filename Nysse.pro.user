@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.0, 2020-10-02T01:41:59. -->
+<!-- Written by QtCreator 4.13.0, 2020-10-25T12:10:21. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -325,8 +325,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Minh/Master/Tampere/autumn 2020/Programming 3 Techniques/project_template/Game/Game.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Minh/Master/Tampere/autumn 2020/Programming 3 Techniques/project_template/Game/Game.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Game2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Minh/Master/Tampere/autumn_2020/Programming_3_Techniques/nowItWent/Game/Game.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Minh/Master/Tampere/autumn_2020/Programming_3_Techniques/nowItWent/Game/Game.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

@@ -4,5 +4,5 @@ SUBDIRS += \
 	CourseLib \
 	Game
 
-CourseLib.subdir = Course/CourseLib
+CourseLib.subdir = course/CourseLib
 Game.depends = CourseLib
