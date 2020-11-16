@@ -16,10 +16,13 @@ else:unix: LIBS += \
     -L$$OUT_PWD/../course/CourseLib/ -lCourseLib
 
 INCLUDEPATH += \
-    $$PWD/../course/CourseLib
+    $$PWD/../course/CourseLib/
 
 DEPENDPATH += \
-    $$PWD/../course/CourseLib
+    $$PWD/../course/CourseLib/
+
+RESOURCES += \
+    $$PWD/../course/CourseLib/offlinedata.qrc
 
 win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += \
     $$OUT_PWD/../course/CourseLib/release/libCourseLib.a
