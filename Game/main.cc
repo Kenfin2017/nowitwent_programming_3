@@ -11,11 +11,7 @@ int main(int argc, char *argv[])
 
     SimpleMainWindow window;
 
-    // Load image according to size option
-    QImage map(":/offlinedata/offlinedata/kartta_iso_1095x592.png","png");
-
     window.show();
-    window.setPicture(map);
 
     return a.exec();
 }
