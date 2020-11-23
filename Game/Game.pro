@@ -7,6 +7,7 @@ CONFIG += c++14
 
 SOURCES += \
     creategame.cc \
+    gamedialog.cc \
     main.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
@@ -37,4 +38,8 @@ else:unix: PRE_TARGETDEPS += \
     $$OUT_PWD/../course/CourseLib/libCourseLib.a
 
 HEADERS += \
-    creategame.hh
+    creategame.hh \
+    gamedialog.hh
+
+FORMS += \
+    gamedialog.ui

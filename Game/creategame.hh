@@ -4,6 +4,7 @@
 #include "core/logic.hh"
 #include "core/city.hh"
 #include "graphics/simplemainwindow.hh"
+#include "gamedialog.hh"
 #include <QString>
 using namespace StudentSide;
 
@@ -14,23 +15,21 @@ class CreateGame
 {
 public:
     /**
-     * @brief CreateGame
+     * @brief CreateGame constructor
      */
     CreateGame();
+
+    /**
+     * @brief CreateGame destructor
+     */
     ~CreateGame();
 
     /**
      * @brief Initialize the game play
-     * @post Game view is created
+     * @post If dialog return accepted, Game view is created, exits otherwise
      * @exception no throw
      */
     void Initialize();
-
-    /**
-     * @brief Show Dialog window
-     * @post After dialog window is close, gamemode is initialized
-     */
-    void Dialog();
 
 
 private:
@@ -39,7 +38,8 @@ private:
     unsigned int playerScore = 0;
     unsigned int highScore;
 
-    SimpleMainWindow *window;
+    SimpleMainWindow * window;
+    GameDialog * dialog;
 };
 
 #endif // CREATEGAME_HH

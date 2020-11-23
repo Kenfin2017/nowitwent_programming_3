@@ -11,8 +11,6 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(offlinedata);
 
     CreateGame game;
-    game.Initialize();
-    game.Dialog();
 
     return a.exec();
 }
