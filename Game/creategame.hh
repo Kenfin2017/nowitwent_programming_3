@@ -10,6 +10,8 @@ using namespace StudentSide;
 /**
  * @brief The CreateGame class contains logic of the game from student side
  */
+
+namespace StudentSide {
 class CreateGame
 {
 public:
@@ -40,5 +42,5 @@ private:
     SimpleMainWindow * window;
     GameDialog * dialog;
 };
-
+}
 #endif // CREATEGAME_HH

@@ -56,8 +56,13 @@ void City::startGame(){
 }
 
 bool City::isGameOver() const{
-    qDebug("City ended!");
-    return true;
+    if(!started){
+        qDebug("City ended!");
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 
@@ -181,4 +186,15 @@ std::shared_ptr<QImage> City::getBackground(const QString &size) const
         return std::make_shared<QImage>(bigBackground_);
     }
 }
+
+std::vector<std::shared_ptr<Interface::IStop> > City::getStops() const
+{
+    return stops_;
+}
+
+std::list<std::shared_ptr<Interface::IVehicle> > City::getBuses() const
+{
+    return buses_;
+}
+
 }
