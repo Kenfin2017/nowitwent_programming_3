@@ -2,7 +2,6 @@
 #define CREATEGAME_HH
 
 #include "core/logic.hh"
-#include "core/city.hh"
 #include "graphics/simplemainwindow.hh"
 #include "gamedialog.hh"
 #include <QString>

@@ -6,6 +6,7 @@ QT += core gui widgets network multimedia
 CONFIG += c++14
 
 SOURCES += \
+    city.cc \
     creategame.cc \
     gamedialog.cc \
     main.cc
@@ -38,6 +39,7 @@ else:unix: PRE_TARGETDEPS += \
     $$OUT_PWD/../course/CourseLib/libCourseLib.a
 
 HEADERS += \
+    city.hh \
     creategame.hh \
     gamedialog.hh
 
