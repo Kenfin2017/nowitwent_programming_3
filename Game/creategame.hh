@@ -2,10 +2,9 @@
 #define CREATEGAME_HH
 
 #include "core/logic.hh"
-#include "graphics/simplemainwindow.hh"
+#include "gamemainwindow.hh"
 #include "gamedialog.hh"
 #include <QString>
-using namespace StudentSide;
 
 /**
  * @brief The CreateGame class contains logic of the game from student side
@@ -39,7 +38,7 @@ private:
     unsigned int playerScore = 0;
     unsigned int highScore;
 
-    SimpleMainWindow * window;
+    GameMainWindow * window;
     GameDialog * dialog;
 };
 }

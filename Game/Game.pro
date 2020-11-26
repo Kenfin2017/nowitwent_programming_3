@@ -9,7 +9,10 @@ SOURCES += \
     city.cc \
     creategame.cc \
     gamedialog.cc \
-    main.cc
+    gamelogic.cc \
+    gamemainwindow.cc \
+    main.cc \
+    treasure.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
     -L$$OUT_PWD/../course/CourseLib/release/ -lCourseLib
@@ -41,7 +44,11 @@ else:unix: PRE_TARGETDEPS += \
 HEADERS += \
     city.hh \
     creategame.hh \
-    gamedialog.hh
+    gamedialog.hh \
+    gamelogic.hh \
+    gamemainwindow.hh \
+    treasure.hh
 
 FORMS += \
-    gamedialog.ui
+    gamedialog.ui \
+    gamemainwindow.ui

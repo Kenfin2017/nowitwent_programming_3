@@ -1,5 +1,6 @@
 #include "creategame.hh"
 
+namespace StudentSide {
 CreateGame::CreateGame()
 {
     Initialize();
@@ -16,7 +17,7 @@ void CreateGame::Initialize()
     dialog = new GameDialog();
     if(dialog->exec() == QDialog::Accepted){ // if dialog receive accept signal
         // Initialize main window with configurations from GameDialog window
-        window = new SimpleMainWindow(nullptr ,dialog->getPlayerName(),dialog->getGameMode(), dialog->getSize());
+        window = new GameMainWindow(nullptr ,dialog->getPlayerName(),dialog->getGameMode(), dialog->getSize());
         window->show();
         qDebug() << "game created";
     }
@@ -30,4 +31,4 @@ void CreateGame::Initialize()
         }
     }
 }
-
+}

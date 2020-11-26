@@ -56,48 +56,39 @@ void City::startGame(){
 }
 
 bool City::isGameOver() const{
-    if(!started){
-        qDebug("City ended!");
-        return true;
-    }
-    else{
-        return false;
-    }
+    qDebug("City ended!");
+    return true;
 }
 
 
 void City::addActor(std::shared_ptr<Interface::IActor> newactor){
-    if(findActor(newactor)){
-        qDebug()<< "Actor already exists in city";
+    if(newactor->isRemoved()){
+        qDebug()<< "Actor is already removed";
     }
     else{
-        qDebug() << typeid(newactor).name();
-        if(typeid(newactor).name() == typeid(std::shared_ptr<CourseSide::Nysse>).name()){
-            std::shared_ptr<Interface::IVehicle> newbus = std::dynamic_pointer_cast<Interface::IVehicle>(newactor);
-            buses_.push_back(newbus);
+        if(typeid(newactor).before(typeid(std::shared_ptr<Interface::IVehicle>))){
+            buses_.push_back(newactor);
+            qDebug() << "Bus Added";
         }
-        if(typeid(newactor).name() == typeid(std::shared_ptr<CourseSide::Passenger>).name()){
-            std::shared_ptr<Interface::IPassenger> newPassenger = std::dynamic_pointer_cast<Interface::IPassenger>(newactor);
-            passengers_.push_back(newPassenger);
+        if(typeid(newactor).before(typeid(std::shared_ptr<Interface::IPassenger>))){
+            passengers_.push_back(newactor);
+            qDebug() << "Passenger Added";
         }
     }
 }
 
 void City::removeActor(std::shared_ptr<Interface::IActor> actor){
-    qDebug() <<"Remove Actor type: "<< typeid(actor.get()).name();
-    if(typeid(actor).name() == typeid(std::shared_ptr<CourseSide::Nysse>).name()){
-        std::shared_ptr<Interface::IVehicle> bus = std::dynamic_pointer_cast<Interface::IVehicle>(actor);
+    if(typeid(actor).before(typeid(std::shared_ptr<Interface::IVehicle>))){
         for(auto b = buses_.begin(); b != buses_.end(); b++ ){
-            if(bus.get() == b->get()){
+            if(actor.get() == b->get()){
                 buses_.remove(*b);
                 break;
             }
         }
     }
-    else if(typeid(actor).name() == typeid(std::shared_ptr<CourseSide::Passenger>).name()){
-        std::shared_ptr<Interface::IPassenger> passenger = std::dynamic_pointer_cast<Interface::IPassenger>(actor);
+    else if(typeid(actor).before(typeid(std::shared_ptr<Interface::IPassenger>))){
         for(auto p = passengers_.begin(); p != passengers_.end(); p++ ){
-            if(passenger.get() == p->get()){
+            if(actor.get() == p->get()){
                 passengers_.remove(*p);
                 break;
             }
@@ -117,18 +108,16 @@ void City::actorRemoved(std::shared_ptr<Interface::IActor> actor)
 
 bool City::findActor(std::shared_ptr<Interface::IActor> actor) const
 {
-    if(typeid(actor).name() == typeid(std::shared_ptr<CourseSide::Nysse>).name()){
-        std::shared_ptr<Interface::IVehicle> bus = std::dynamic_pointer_cast<Interface::IVehicle>(actor);
+    if(typeid(actor).before(typeid(std::shared_ptr<Interface::IVehicle>))){
         for(auto b = buses_.begin(); b != buses_.end(); b++ ){
-            if(b->get() == bus.get()){
+            if(b->get() == actor.get()){
                 return true;
             }
         }
     }
-    else if(typeid(actor.get()).name() == typeid(std::shared_ptr<CourseSide::Passenger>).name()){
-        std::shared_ptr<Interface::IPassenger> passenger = std::dynamic_pointer_cast<Interface::IPassenger>(actor);
+    else if(typeid(actor).before(typeid(std::shared_ptr<Interface::IPassenger>))){
         for(auto p = passengers_.begin(); p != passengers_.end(); p++ ){
-            if(passenger.get() == p->get()){
+            if(p->get() == actor.get()){
                 return true;
             }
         }
@@ -139,20 +128,25 @@ bool City::findActor(std::shared_ptr<Interface::IActor> actor) const
 void City::actorMoved(std::shared_ptr<Interface::IActor> actor)
 {
     if(started){
-        if(typeid(actor).name() == typeid(std::shared_ptr<CourseSide::Nysse>).name()){
-            for(auto bus = buses_.begin(); bus != buses_.end(); bus++){
-                // compare referenced actor has different location
-                if(actor->giveLocation().giveX() != bus->get()->giveLocation().giveX()){
-                    qDebug() << "bus has moved!";
-                }
-            }
+//        if(typeid(actor).before(typeid(std::shared_ptr<Interface::IVehicle>))){
+//            for(auto bus = buses_.begin(); bus != buses_.end(); bus++){
+//                if(bus == actor){
+//                    qDebug() << "bus has moved!";
+//                }
+//            }
+//        }
+//        else if(typeid(actor).before(typeid(std::shared_ptr<Interface::IPassenger>))){
+//            for(auto pas = passengers_.begin(); pas != passengers_.end(); pas++){
+//                if(actor->giveLocation().giveX() != pas->get()->giveLocation().giveX()){
+//                    qDebug() << "passenger has moved";
+//                }
+//            }
+//        }
+        if(actor->isRemoved()){
+            qDebug() << "Actor removed, and should not be moving";
         }
-        else if(typeid(actor).name() == typeid(std::shared_ptr<CourseSide::Passenger>).name()){
-            for(auto pas = passengers_.begin(); pas != passengers_.end(); pas++){
-                if(actor->giveLocation().giveX() != pas->get()->giveLocation().giveX()){
-                    qDebug() << "passenger has moved";
-                }
-            }
+        else{
+            qDebug() << "Actor can be moved";
         }
     }
 }
@@ -160,14 +154,15 @@ void City::actorMoved(std::shared_ptr<Interface::IActor> actor)
 std::vector<std::shared_ptr<Interface::IActor> > City::getNearbyActors(Interface::Location loc) const
 {
     std::vector<std::shared_ptr<Interface::IActor>> closebyActors;
-    for(std::shared_ptr<Interface::IVehicle> bus: buses_){
+
+    for(std::shared_ptr<Interface::IActor> bus: buses_){
        if(bus.get()->giveLocation().isClose(loc)){
-           closebyActors.push_back(std::dynamic_pointer_cast<Interface::IActor>(bus));
+           closebyActors.push_back(bus);
        }
     }
-    for(std::shared_ptr<Interface::IPassenger> pas: passengers_){
+    for(std::shared_ptr<Interface::IActor> pas: passengers_){
        if(pas.get()->giveLocation().isClose(loc)){
-           closebyActors.push_back(std::dynamic_pointer_cast<Interface::IActor>(pas));
+           closebyActors.push_back(pas);
        }
     }
 
@@ -187,14 +182,16 @@ std::shared_ptr<QImage> City::getBackground(const QString &size) const
     }
 }
 
-std::vector<std::shared_ptr<Interface::IStop> > City::getStops() const
+std::shared_ptr<Interface::IActor> City::getBus()
 {
-    return stops_;
+    srand(time(NULL));
+    int randIdx = rand() % buses_.size();
+    int index = 0;
+    for(std::shared_ptr<Interface::IActor> bus: buses_){
+        if(index++ == randIdx){
+            return bus;
+        }
+    }
+    return buses_.front();
 }
-
-std::list<std::shared_ptr<Interface::IVehicle> > City::getBuses() const
-{
-    return buses_;
-}
-
 }

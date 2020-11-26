@@ -1,9 +1,9 @@
 #include <QApplication>
 #include <QImage>
-#include "graphics/simplemainwindow.hh"
+#include "gamemainwindow.hh"
 #include "creategame.hh"
 
-using namespace CourseSide;
+using namespace StudentSide;
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(offlinedata);
 
     CreateGame game;
-
+//    GameMainWindow gamewindow;
+//    gamewindow.show();
     return a.exec();
 }

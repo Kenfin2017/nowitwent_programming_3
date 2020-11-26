@@ -44,32 +44,17 @@ public:
     bool findActor(std::shared_ptr<Interface::IActor> actor) const;
     void actorMoved(std::shared_ptr<Interface::IActor> actor);
     std::vector<std::shared_ptr<Interface::IActor>> getNearbyActors(Interface::Location loc) const;
-
-    /**
-     * @brief getBackground return background image depend on the chosen size
-     * @param size
-     * @return
-     */
     std::shared_ptr<QImage> getBackground(const QString &size) const;
 
-    /**
-     * @brief getStops returns vector of stops
-     * @return
-     */
-    std::vector<std::shared_ptr<Interface::IStop>> getStops() const;
+    std::shared_ptr<Interface::IActor> getBus();
 
-    /**
-     * @brief getBuses returns list of buses
-     * @return
-     */
-    std::list<std::shared_ptr<Interface::IVehicle>> getBuses() const;
 private:
     QImage basicBackground_;
     QImage bigBackground_;
     QTime cityTimer_;
-    std::vector<std::shared_ptr<Interface::IStop>> stops_;
-    std::list<std::shared_ptr<Interface::IVehicle>> buses_;
-    std::list<std::shared_ptr<Interface::IPassenger>> passengers_;
+    std::list<std::shared_ptr<Interface::IStop>> stops_;
+    std::list<std::shared_ptr<Interface::IActor>> buses_;
+    std::list<std::shared_ptr<Interface::IActor>> passengers_;
     bool started = false;
 };
 }

@@ -12,6 +12,7 @@ namespace Ui {
 class GameDialog;
 }
 
+namespace StudentSide{
 class GameDialog : public QDialog
 {
     Q_OBJECT
@@ -38,5 +39,5 @@ private:
     QString mapSize;
     bool hardMode;
 };
-
+}
 #endif // GAMEDIALOG_HH

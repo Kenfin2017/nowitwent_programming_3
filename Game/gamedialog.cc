@@ -1,6 +1,6 @@
 #include "gamedialog.hh"
 #include "ui_gamedialog.h"
-
+namespace StudentSide{
 GameDialog::GameDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::GameDialog)
@@ -69,4 +69,5 @@ void GameDialog::on_mapSize_comboBox_currentIndexChanged(int index)
     default:
         break;
     }
+}
 }
