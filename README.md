@@ -1,16 +1,9 @@
-#### Game Overview
+### Description
+This project aims to implement a simple gameplay with basic features which can allow controlling figure’s movement with arrow keys, and interactions with and other game objects such as coins and buses. The game rule is simple. Players try to earn as much points as they can before the end of the day (in-game time starts at 5.30 am, ends at 11.30 pm), while avoiding the buses in traffic. The coins are generated randomly on the city’s map. Buses, on the other hand, regularly changes their positions according to the arranged schedule, which also change their number of passengers, shown above the bus icon.
 
-##### Goals
-- The player who score higher than others after each gameplay wins. Scores are earned by:
-+ Collect passengers at terminals (propotional to how many passengers collected at the terminal, the more busy at the terminal, the higher the score)
-+ Arrive at terminal on time (the earlier, the more points you will earn)
-
-##### Use Cases
-- The game starts with the help of a self-implemented main program. The game asks with a separate configuration window the number of players and other information needed by the game. After this the main window implemented by the group is opened. On it, there is the game board with the map, the players gamepieces and other necessary information.
-- The given implementation produces buses onto the map and moves them according to their schedules. On the busstops, passenger get on and off the busses.
-- The player starts the game by clicking a game piece in the main window.
-- The player moves their playable figure with the arrow keys to move toward a close-by bus that just picked up a couple of passengers.
-- The player shoot at the bus with a stun gun. When hit, the bus stops and turns pink. The passengers on the bus need to walk.
-- The player seeks new busses as their target. In the main window statistics about the stuck busses and the passenger on foor is show.
-- The game ends after five minutes of gameplay and the final score is shown to the player.
-- The player closes the game.
+### User Manual
+- The game starts after player have finished editing fields in start dialog. The game asks users with name, the preferred score limit and the options for map size as small or large.
+- The player starts the game by clicking the player character in the main window. The player can choose to navigate the character by using arrow buttons on their keyboards or arrow buttons in the main window of the game.
+- The player moves the character with the arrow keys to move toward coins figure to collect them. Depending on size of the pile of coins, players can earn up to 40 more points.
+- The players are to avoid buses coming. On getting hit, 10*(no of passengers) point will be subtracted.
+- The game ends at 23:30 (in-game time) or when the player reaches the score-limit that he/she set at the beginning of the game.

@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/offlinedata">
+        <file>offlinedata/final_bus_liteN.json</file>
+        <file>offlinedata/full_stations_kkj3.json</file>
+        <file>offlinedata/lite_bus_wanha.json</file>
+        <file>offlinedata/kartta_iso_1095x592.png</file>
+        <file>offlinedata/kartta_pieni_500x500.png</file>
+        <file>offlinedata/kartta_pieni_500x500WAN.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>offlinedata/animated_coins.png</file>
+        <file>offlinedata/bus.png</file>
+        <file>offlinedata/bus_stop.png</file>
+        <file>offlinedata/bus_animated_red.png</file>
+        <file>offlinedata/bus_animated_yellow.jpg</file>
+    </qresource>
+    <qresource prefix="/player_images">
+        <file>offlinedata/player-face-east.png</file>
+        <file>offlinedata/player-face-north.png</file>
+        <file>offlinedata/player-face-south.png</file>
+        <file>offlinedata/player-face-west.png</file>
+        <file>offlinedata/player-goes-east.png</file>
+        <file>offlinedata/player-goes-north.png</file>
+        <file>offlinedata/player-goes-south.png</file>
+        <file>offlinedata/player-goes-west.png</file>
+    </qresource>
+    <qresource prefix="/audio">
+        <file>offlinedata/Sim_City-The_Card_Game.mp3</file>
+        <file>offlinedata/Bag-of-Coins-B.mp3</file>
+        <file>offlinedata/smash.mp3</file>
+        <file>offlinedata/mixkit-boxer-getting-hit.mp3</file>
+    </qresource>
+</RCC>

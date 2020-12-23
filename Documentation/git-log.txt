@@ -1,0 +1,131 @@
+commit 92e36cbb020804637281c4454c942a0514d7fde0
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 11:14:30 2020 +0200
+
+    Fixed the gitsubmodule error for final submission
+
+commit 12f9dbef8c494cc30cff3e44c0b47f9104faa9f6
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 11:07:42 2020 +0200
+
+    some adjustments in project_document.pdf
+
+commit 86f1a4cea39a7e31a9f2a3eb982128bf2a0afa5a
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 09:07:26 2020 +0200
+
+    git log
+
+commit 0e2317737bce24c49dc000fd8919ffec716afccb
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 09:02:32 2020 +0200
+
+    Finalized project with documentation
+
+commit d3a7a819d0f661fc1a08cacc1a33551db6d42ec9
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 08:40:43 2020 +0200
+
+    removed unncessary comments in createGame
+
+commit 56539154d6ea4711d45019d394ba35487c005efc
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Mon Nov 30 08:39:29 2020 +0200
+
+    function definitions in Doxy format
+
+commit 1262cedccac3949af0d273e6dc86b195f54bb533
+Author: Thao Huynh <thao.huynh@tuni.fi>
+Date:   Sun Nov 29 22:38:47 2020 +0200
+
+    Sound effect added
+
+commit d971afe3924159461e1d0e536e50401f02977c8e
+Author: Thao Huynh <thao.huynh@tuni.fi>
+Date:   Sun Nov 29 22:13:40 2020 +0200
+
+    Dialog window modified
+
+commit c11a1b11f1138d796ab8e5a49c08833a267dc2ea
+Author: Thao Huynh <thao.huynh@tuni.fi>
+Date:   Sun Nov 29 22:12:21 2020 +0200
+
+    Name label created
+
+commit c35e7c6431960a32506fc506afd72afc0a6d99bd
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Sat Nov 28 20:53:39 2020 +0200
+
+    modified gitlab-ci.yml and added crash sound effect
+
+commit c50fbbfc8a20da5a2c1b5ff54e83dc162e01eab5
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Sat Nov 28 18:04:32 2020 +0200
+
+    Allow player to set score limit and changed game rule
+
+commit 6ef1aa90277bfb232c23b1cf772867442cac990f
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Sat Nov 28 14:56:54 2020 +0200
+
+    added .gitignore
+
+commit 45ad117bd70417459bd2e53e86589a8f6d7606d9
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Sat Nov 28 14:53:43 2020 +0200
+
+    Added UnitTest and Statistic class
+
+commit 592b2c35137f04ab90fa0904e048a2fdb447f9aa
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Sat Nov 28 08:54:55 2020 +0200
+
+    Add passenger count label on buseItem
+
+commit 248b03d11c6c23b0d0e8cb21bf8c663e2908ca7f
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 17:01:56 2020 +0200
+
+    added graphics in gamedialog
+
+commit 5f0b74af8218b0abe9240e8368fe1cbc8b063250
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 16:37:15 2020 +0200
+
+    added statistics unittest and added more detail in game rule
+
+commit ebbaa69b7632abb94883b056753278c28d99cf43
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 14:49:04 2020 +0200
+
+    Digital clock graphic
+
+commit a860a83b2179cf8ce6ba1b1949d0b79de41ae8f6
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 14:48:17 2020 +0200
+
+    added timer and set game end rule
+
+commit 51f034c8049483018c9d5c1a9e15fd5c9c937da5
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 13:22:33 2020 +0200
+
+    Added sound effects and moved offlinedata.qrc to Game dir
+
+commit 6575a91d4957bf864ed4c9d5aee44b66f87b7c34
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 01:23:27 2020 +0200
+
+    update Game project
+
+commit 2ad4b588e2061ae26319f2dd7229bcd290f332f2
+Author: Minh Nguyen <minh.nguyen@tuni.fi>
+Date:   Fri Nov 27 01:22:57 2020 +0200
+
+    moved project from github
+
+commit 5a49d75bbf2fb5d0aced950cb908b3251bcfca11
+Author: Minna Färm <minna.farm@tut.fi>
+Date:   Fri Sep 25 14:24:55 2020 +0300
+
+    Template

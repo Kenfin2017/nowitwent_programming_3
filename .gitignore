@@ -1,2 +1,4 @@
-*Debug/
-*.o
+*.pro.user
+Documentation/html
+Documentation/latex
+course
